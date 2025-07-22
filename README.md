@@ -17,9 +17,9 @@ This app fetches product data from a public API and provides a smooth shopping e
 ##  Folder Structure
 
 lib/
-├── models/ # All Data models
-├── Providers/ # All Provider file for Statemanagement
-├── screens/ # UI screens
-├── Services/ # All Services file are here like (local storge Services,api services etc)
-├── widgets/ # All Reusable and Custom widgets
-└── main.dart # App entry point
+- > models/ # All Data models
+- > Providers/ # All Provider file for Statemanagement
+- > screens/ # UI screens
+- > Services/ # All Services file are here like (local storge Services,api services etc)
+- > widgets/ # All Reusable and Custom widgets
+- > main.dart # App entry point
