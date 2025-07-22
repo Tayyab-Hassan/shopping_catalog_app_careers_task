@@ -1,7 +1,3 @@
-// This widget displays a horizontal, scrollable list of categories for filtering.
-// It uses an AnimatedContainer to provide a smooth visual transition between
-// selected and unselected states.
-
 import 'package:flutter/material.dart';
 
 class CategorySelector extends StatelessWidget {

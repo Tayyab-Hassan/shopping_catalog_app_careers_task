@@ -45,14 +45,14 @@ class ProductProvider with ChangeNotifier {
   void _applyFilters() {
     List<Product> tempProducts = List.from(_products);
 
-    // Apply category filter
+    // funtion to filter category
     if (_selectedCategory.toLowerCase() != 'all') {
       tempProducts = tempProducts
           .where((product) => product.category.toLowerCase() == _selectedCategory.toLowerCase())
           .toList();
     }
 
-    // Apply search filter
+    // Apply search  functionality filter
     if (_searchQuery.isNotEmpty) {
       tempProducts = tempProducts
           .where((product) => product.title.toLowerCase().contains(_searchQuery.toLowerCase()))

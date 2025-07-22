@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shopping_catalog_app/Models/product_model.dart';
-import 'package:shopping_catalog_app/Providers/cart_provider.dart';
-import 'package:shopping_catalog_app/Providers/product_provider.dart';
-import 'package:shopping_catalog_app/screens/product_detail_screen.dart';
+
+import '../Models/product_model.dart';
+import '../Providers/cart_provider.dart';
+import '../Providers/product_provider.dart';
+import '../screens/product_detail_screen.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
-  // Add a prefix to make the Hero tag unique per screen
   final String heroTagPrefix;
 
   const ProductCard({super.key, required this.product, required this.heroTagPrefix});
 
   @override
   Widget build(BuildContext context) {
-    // Create the full, unique hero tag
     final String uniqueHeroTag = '${heroTagPrefix}product-image-${product.id}';
 
     return GestureDetector(
@@ -22,11 +21,7 @@ class ProductCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => ProductDetailScreen(
-              product: product,
-              // Pass the unique tag to the detail screen
-              heroTag: uniqueHeroTag,
-            ),
+            builder: (context) => ProductDetailScreen(product: product, heroTag: uniqueHeroTag),
           ),
         );
       },
@@ -47,7 +42,6 @@ class ProductCard extends StatelessWidget {
                   children: [
                     Positioned.fill(
                       child: Hero(
-                        // Use the unique hero tag here
                         tag: uniqueHeroTag,
                         child: Image.network(
                           product.image,

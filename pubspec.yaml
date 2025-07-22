@@ -17,10 +17,13 @@ dependencies:
   provider: 
   
   # For local data persistence (favorites)
-  shared_preferences: 
+  shared_preferences: ^2.5.3 
   
   # For staggered grid animations
   flutter_staggered_animations:
+
+  #For faster image load
+  cached_network_image: ^3.4.1
 
   #For Advance Icons
   iconsax: ^0.0.8

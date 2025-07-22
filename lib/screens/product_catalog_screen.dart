@@ -20,7 +20,6 @@ class ProductCatalogScreenState extends State<ProductCatalogScreen> {
   @override
   void initState() {
     super.initState();
-    // Fetch data when the screen is first loaded
     _productsFuture = context.read<ProductProvider>().fetchAllData();
   }
 
@@ -57,7 +56,6 @@ class ProductCatalogScreenState extends State<ProductCatalogScreen> {
         centerTitle: true,
         actions: [
           IconButton(icon: Icon(_isSearching ? Icons.close : Icons.search), onPressed: _toggleSearch),
-          // The cart icon is removed from here as it's now in the BottomNavBar
         ],
       ),
       body: Column(

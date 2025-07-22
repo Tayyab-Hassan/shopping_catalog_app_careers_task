@@ -1,7 +1,3 @@
-// This service abstracts the local storage implementation (SharedPreferences).
-// This makes it easy to swap out the storage solution in the future without
-// changing the business logic in the providers.
-
 import 'package:shared_preferences/shared_preferences.dart';
 
 class StorageService {

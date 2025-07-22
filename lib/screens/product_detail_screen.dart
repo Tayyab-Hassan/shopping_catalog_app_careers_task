@@ -5,7 +5,6 @@ import 'package:shopping_catalog_app/Providers/cart_provider.dart';
 
 class ProductDetailScreen extends StatelessWidget {
   final Product product;
-  // Receive the full, unique hero tag
   final String heroTag;
 
   const ProductDetailScreen({super.key, required this.product, required this.heroTag});
@@ -23,7 +22,6 @@ class ProductDetailScreen extends StatelessWidget {
           children: [
             SizedBox(height: 50),
             Hero(
-              // Use the received unique tag
               tag: heroTag,
               flightShuttleBuilder:
                   (
@@ -93,17 +91,15 @@ class ProductDetailScreen extends StatelessWidget {
             cartProvider.addItem(product);
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
-                content: Text('${product.title} added to cart!'),
-                duration: const Duration(seconds: 2),
-                action: SnackBarAction(
-                  label: 'UNDO',
-                  onPressed: () {
-                    cartProvider.updateQuantity(
-                      product.id,
-                      (cartProvider.items[product.id]?.quantity ?? 1) - 1,
-                    );
-                  },
+                content: Text(
+                  '${product.title} added to cart!',
+                  style: const TextStyle(color: Colors.deepPurple),
                 ),
+                duration: const Duration(seconds: 2),
+                behavior: SnackBarBehavior.floating,
+                backgroundColor: Colors.white.withAlpha((0.8 * 255).toInt()),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+                margin: const EdgeInsets.symmetric(horizontal: 48, vertical: 20),
               ),
             );
           },

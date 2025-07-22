@@ -1,16 +1,25 @@
-# shopping_catalog_app
+# Shopping Catalog App
 
-A new Flutter project.
+A Flutter-based shopping catalog application built as part of the **Track 3: Flutter Developer Task**.  
+This app fetches product data from a public API and provides a smooth shopping experience with features like search, favorites, filtering, and cart management.
 
-## Getting Started
+##  Features
 
-This project is a starting point for a Flutter application.
+- > Fetch product list from [FakeStoreAPI](https://fakestoreapi.com/)
+- > Display products in a responsive **GridView**
+- > Add/Remove products from **Favorites** (locally persisted)
+- > Add/Remove products from **Cart**
+- > **Search** products by name
+- > **Category filter** to filter products by type
+- > Clean UI with organized code structure (Models, Screens, Widgets)
+- > State management using `setState`
 
-A few resources to get you started if this is your first Flutter project:
+##  Folder Structure
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+lib/
+├── models/ # All Data models
+├── Providers/ # All Provider file for Statemanagement
+├── screens/ # UI screens
+├── Services/ # All Services file are here like (local storge Services,api services etc)
+├── widgets/ # All Reusable and Custom widgets
+└── main.dart # App entry point

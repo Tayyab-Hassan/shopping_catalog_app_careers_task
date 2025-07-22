@@ -1,6 +1,3 @@
-// This service encapsulates all API communication logic.
-// By keeping it separate, we can easily mock it for testing or switch to a different API.
-
 import 'dart:convert';
 import 'dart:io';
 
@@ -11,7 +8,7 @@ import 'package:shopping_catalog_app/Services/api_exception.dart';
 class ApiService {
   static const String _baseUrl = 'https://fakestoreapi.com';
 
-  // Fetches all products from the API.
+  // Fetches all products Using fackstore API.
   Future<List<Product>> getProducts() async {
     try {
       final response = await http.get(Uri.parse('$_baseUrl/products'));

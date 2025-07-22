@@ -9,7 +9,6 @@ import 'package:shopping_catalog_app/Widgets/product_card.dart';
 
 class ProductGrid extends StatelessWidget {
   final List<Product> products;
-  // Add the prefix to the constructor
   final String heroTagPrefix;
 
   const ProductGrid({super.key, required this.products, required this.heroTagPrefix});
@@ -37,7 +36,6 @@ class ProductGrid extends StatelessWidget {
             columnCount: crossAxisCount,
             child: ScaleAnimation(
               child: FadeInAnimation(
-                // Pass the prefix down to the ProductCard
                 child: ProductCard(product: products[index], heroTagPrefix: heroTagPrefix),
               ),
             ),

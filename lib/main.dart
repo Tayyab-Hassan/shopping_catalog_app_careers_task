@@ -22,11 +22,10 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<ProductProvider>(
           create: (context) => ProductProvider(context.read<ApiService>(), context.read<StorageService>()),
         ),
-        // Add the CartProvider here
         ChangeNotifierProvider<CartProvider>(create: (_) => CartProvider()),
       ],
       child: MaterialApp(
-        title: 'Modern Shopping Catalog',
+        title: 'Shopping Catalog App',
         theme: ThemeData(
           primarySwatch: Colors.deepPurple,
           scaffoldBackgroundColor: Colors.grey[50],

@@ -1,6 +1,4 @@
 // This is a reusable widget for displaying a consistent error message UI.
-// It takes a message and a retry callback, promoting code reuse and a
-// standard look and feel for error states across the application.
 
 import 'package:flutter/material.dart';
 
